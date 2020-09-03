@@ -4,6 +4,8 @@ LABEL maintainer="docker-dario@neomediatech.it"
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Rome
 
+ARG UPDATE=2020-09-03
+
 RUN echo $TZ > /etc/timezone && \
     rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-get update && \
